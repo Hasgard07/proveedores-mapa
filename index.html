@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de tu página -->
+    <title>Plan Estratégico de Proveedores</title>
+    
+    <!-- Carga de Tailwind CSS para estilos rápidos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de colores personalizados para que coincidan con el branding de BBVA -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bbva-blue': '#004481',
+                        'bbva-blue-light': '#0078d2',
+                        'bbva-gray': '#666666',
+                        'bbva-gray-light': '#f4f4f4',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos adicionales para elementos específicos -->
+    <style>
+        /* Estilo base para el cuerpo de la página */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        /* Estilos para el ícono del acordeón (+/-) */
+        .accordion-button::after {
+            content: '+';
+            font-size: 1.8em;
+            color: #0078d2;
+            transition: transform 0.3s ease-in-out;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .accordion-button.active::after {
+            content: '−';
+        }
+        /* Transición suave para mostrar y ocultar el contenido del acordeón */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        /* Estilo para el botón de pregunta frecuente activo */
+        .faq-question-btn.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-white text-bbva-gray">
+
+    <!-- =========== CABECERA (HEADER) =========== -->
+    <header class="border-b border-gray-200 p-4 sticky top-0 bg-white z-10">
+        <div class="container mx-auto">
+            <h1 class="text-2xl font-bold text-bbva-blue">Evaluación Estratégica de Proveedores</h1>
+        </div>
+    </header>
+
+    <!-- =========== CONTENIDO PRINCIPAL (MAIN CONTENT) =========== -->
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <!-- --- INICIA SECCIÓN DE TÍTULO Y DESCRIPCIÓN --- -->
+        <section class="mb-8">
+            <h2 class="text-4xl font-bold text-bbva-blue mb-4">Mapa Conceptual: Hacia una Nueva Etapa</h2>
+            <p class="text-lg mb-8">
+                Una nueva etapa en BBVA. El comienzo de un camino apasionante hacia el BBVA del futuro en el que acompañamos la voluntad de personas y Proveedores de llegar más lejos. Este plan persigue incorporar y comparar eficazmente a los proveedores de tecnología más allá de la tarifa, evaluando variables que impactan directamente en la eficiencia, la calidad y el valor a largo plazo.
+            </p>
+            <!-- Imagen de cabecera -->
+            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Equipo estratégico colaborando en una oficina moderna" class="w-full h-64 object-cover rounded-lg shadow-md">
+        </section>
+        <!-- --- FIN SECCIÓN DE TÍTULO Y DESCRIPCIÓN --- -->
+
+
+        <!-- --- INICIA SECCIÓN DE ACORDEONES (CONTENIDO DESPLEGABLE) --- -->
+        <div class="accordion-container space-y-4">
+            
+            <!-- ACORDEÓN 1: Análisis de Costos -->
+            <div class="accordion-item border border-gray-200 rounded-lg overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 text-xl font-semibold text-bbva-blue-light hover:bg-gray-50 relative flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-bbva-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1h4v1m-4-1V3a1 1 0 011-1h2a1 1 0 011 1v3h-4zM12 18c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 18v-1m0 1v.01M12 20v-1h4v1m-4-1V17a1 1 0 011-1h2a1 1 0 011 1v3h-4z" /></svg>
+                    <span>Análisis Estratégico de Costos</span>
+                </button>
+                <div class="accordion-content bg-bbva-gray-light">
+                    <div class="p-6">
+                        <p class="mb-4">No solo se debe evaluar el número, sino también cómo se compone y qué incluye para tomar decisiones informadas.</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Modelo de Precios:</strong> Evaluar esquemas por hora/día (flexible), proyecto cerrado (alcance definido) o célula de trabajo (largo plazo).</li>
+                            <li><strong>Tarifas por Rol y Seniority:</strong> Comparar el costo de perfiles equivalentes (Ej: Desarrollador Senior, Arquitecto, QA).</li>
+                            <li><strong>Costos Ocultos o Adicionales:</strong> Identificar gastos como licencias de software, infraestructura, herramientas y viáticos.</li>
+                            <li><strong>Condiciones de Contratación:</strong> Analizar la flexibilidad para escalar equipos, las políticas de pago y las penalizaciones.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACORDEÓN 2: Eficiencia y Productividad -->
+            <div class="accordion-item border border-gray-200 rounded-lg overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 text-xl font-semibold text-bbva-blue-light hover:bg-gray-50 relative flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-bbva-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    <span>Eficiencia y Productividad</span>
+                </button>
+                <div class="accordion-content bg-bbva-gray-light">
+                     <div class="p-6">
+                        <p class="mb-4">Variables críticas que indican qué tan eficiente es un proveedor en la entrega de valor real.</p>
+                         <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Velocidad y Productividad (Velocity):</strong> Medir con métricas ágiles y analizar la reducción del Time-to-Market.</li>
+                            <li><strong>Calidad del Código Entregado:</strong> Evaluar la deuda técnica (ej. SonarQube) y la tasa de errores/bugs post-producción.</li>
+                            <li><strong>Autonomía y Proactividad:</strong> ¿El equipo requiere supervisión constante o puede autogestionarse y proponer mejoras?</li>
+                            <li><strong>Cumplimiento y Fiabilidad:</strong> Un historial sólido de entregas a tiempo es un indicador directo de buena gestión.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACORDEÓN 3: Capacidad y Experiencia del Proveedor -->
+            <div class="accordion-item border border-gray-200 rounded-lg overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 text-xl font-semibold text-bbva-blue-light hover:bg-gray-50 relative flex items-center gap-4">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-bbva-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                    <span>Capacidad y Experiencia del Proveedor</span>
+                </button>
+                <div class="accordion-content bg-bbva-gray-light">
+                    <div class="p-6">
+                        <p class="mb-4">Un proveedor con experiencia relevante resolverá problemas más rápido y con mejores soluciones, garantizando la calidad.</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Experiencia Comprobada:</strong> Revisar casos de éxito similares en la industria, portafolio de proyectos y referencias de clientes.</li>
+                            <li><strong>Dominio Tecnológico:</strong> Nivel de especialización en las tecnologías clave del proyecto y certificaciones oficiales del equipo.</li>
+                            <li><strong>Metodología de Trabajo:</strong> Asegurar que su metodología (Agile, Scrum, etc.) sea compatible para evitar fricciones.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACORDEÓN 4: Colaboración y Soporte a Largo Plazo -->
+            <div class="accordion-item border border-gray-200 rounded-lg overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 text-xl font-semibold text-bbva-blue-light hover:bg-gray-50 relative flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-bbva-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    <span>Colaboración y Soporte a Largo Plazo</span>
+                </button>
+                <div class="accordion-content bg-bbva-gray-light">
+                    <div class="p-6">
+                        <p class="mb-4">Factores que aseguran una relación productiva, sostenible y que aportan a la continuidad del negocio.</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Soporte Post-Lanzamiento:</strong> Definir Acuerdos de Nivel de Servicio (SLAs), garantías sobre el código y tiempos de respuesta.</li>
+                            <li><strong>Flexibilidad y Adaptación:</strong> Analizar cómo se gestionan los cambios de alcance para evitar retrasos y sobrecostos.</li>
+                            <li><strong>Rotación de Personal:</strong> Medir las tasas de rotación, ya que una alta rotación afecta la continuidad y el conocimiento del proyecto.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACORDEÓN 5: Modelo de Gobierno y Seguimiento -->
+            <div class="accordion-item border border-gray-200 rounded-lg overflow-hidden">
+                <button class="accordion-button w-full text-left p-5 text-xl font-semibold text-bbva-blue-light hover:bg-gray-50 relative flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-bbva-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    <span>Modelo de Gobierno y Seguimiento</span>
+                </button>
+                <div class="accordion-content bg-bbva-gray-light">
+                    <div class="p-6">
+                        <p class="mb-4">Esquema de seguimiento para garantizar la alineación y el cumplimiento de objetivos en todos los niveles.</p>
+                        <ul class="list-none space-y-4">
+                            <li><strong class="text-bbva-blue">Nivel Operacional (Comité Operativo):</strong><br><strong>Frecuencia:</strong> Diaria.<br><strong>Objetivos:</strong> Seguimiento de tickets, revisión de cumplimiento de ANS y gestión de impedimentos.</li>
+                            <li><strong class="text-bbva-blue">Nivel Táctico (Comité Directivo):</strong><br><strong>Frecuencia:</strong> Quincenal.<br><strong>Objetivos:</strong> Revisión de KPIs, gestión de problemas/riesgos, iniciativas de mejora y aprobación de presupuestos.</li>
+                            <li><strong class="text-bbva-blue">Nivel Estratégico (Comité Ejecutivo):</strong><br><strong>Frecuencia:</strong> Mensual.<br><strong>Objetivos:</strong> Revisión de informes gerenciales, desempeño global y aprobación final de pagos y presupuestos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- --- FIN SECCIÓN DE ACORDEONES --- -->
+        
+        <!-- --- INICIA NUEVA SECCIÓN DE PREGUNTAS FRECUENTES --- -->
+        <section class="mt-12">
+            <div class="border rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
+                <!-- Columna Izquierda: Preguntas -->
+                <div class="w-full md:w-1/3 bg-bbva-blue p-8 text-white">
+                    <span class="text-sm font-bold bg-white text-bbva-blue rounded-full px-3 py-1">FAQs</span>
+                    <h3 class="text-3xl font-bold mt-4 mb-6">Preguntas frecuentes</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <button data-target="faq-answer-1" class="faq-question-btn active w-full text-left p-3 rounded-md transition-colors duration-200">
+                                ¿Con qué frecuencia se realizarán estas evaluaciones?
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="faq-answer-2" class="faq-question-btn w-full text-left p-3 rounded-md transition-colors duration-200">
+                                ¿Qué es la "Deuda Técnica" y por qué es importante?
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="faq-answer-3" class="faq-question-btn w-full text-left p-3 rounded-md transition-colors duration-200">
+                                ¿Cómo se medirá la "Autonomía y Proactividad" de un proveedor?
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna Derecha: Respuestas -->
+                <div class="w-full md:w-2/3 p-8">
+                    <div id="faq-answer-1" class="faq-answer-panel">
+                        <h4 class="text-2xl font-bold text-bbva-blue mb-4">¿Con qué frecuencia se realizarán estas evaluaciones?</h4>
+                        <p>Las evaluaciones de desempeño y cumplimiento se realizarán de forma semestral, mientras que los comités de seguimiento tendrán frecuencias diarias, quincenales o mensuales según el nivel (Operativo, Táctico o Estratégico).</p>
+                    </div>
+                    <div id="faq-answer-2" class="faq-answer-panel hidden">
+                        <h4 class="text-2xl font-bold text-bbva-blue mb-4">¿Qué es la "Deuda Técnica" y por qué es importante?</h4>
+                        <p>La deuda técnica se refiere al costo implícito de retrabajo causado por elegir una solución fácil (limitada) ahora en lugar de usar un mejor enfoque que tomaría más tiempo. Es crucial evaluarla porque un código de baja calidad hoy se traduce en mayores costos de mantenimiento y problemas de escalabilidad en el futuro.</p>
+                    </div>
+                    <div id="faq-answer-3" class="faq-answer-panel hidden">
+                        <h4 class="text-2xl font-bold text-bbva-blue mb-4">¿Cómo se medirá la "Autonomía y Proactividad" de un proveedor?</h4>
+                        <p>Se medirá a través de la observación directa en los comités de seguimiento y la retroalimentación de los equipos internos. Se valorará si el proveedor propone mejoras de proceso y tecnología, si puede autogestionar sus tareas sin supervisión constante y si anticipa problemas potenciales antes de que ocurran.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --- FIN NUEVA SECCIÓN DE PREGUNTAS FRECUENTES --- -->
+
+    </main>
+
+    <!-- =========== PIE DE PÁGINA (FOOTER) =========== -->
+    <footer class="bg-bbva-gray-light mt-12 py-8">
+        <div class="container mx-auto text-center text-bbva-gray">
+            <p>&copy; 2024 BBVA. Todos los derechos reservados.</p>
+            <p class="mt-2">Acompañando tu voluntad de llegar más lejos.</p>
+        </div>
+    </footer>
+
+
+    <!-- =========== SCRIPT PARA LA FUNCIONALIDAD DE LOS COMPONENTES =========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Lógica para los Acordeones Superiores
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const button = item.querySelector('.accordion-button');
+                const content = item.querySelector('.accordion-content');
+                button.addEventListener('click', () => {
+                    const isActive = button.classList.contains('active');
+                    // Cierra todos los acordeones
+                    document.querySelectorAll('.accordion-item .accordion-button').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.accordion-item .accordion-content').forEach(c => c.style.maxHeight = null);
+                    // Abre o cierra el actual
+                    if (!isActive) {
+                        button.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // Lógica para la Nueva Sección de FAQs
+            const faqQuestionButtons = document.querySelectorAll('.faq-question-btn');
+            const faqAnswerPanels = document.querySelectorAll('.faq-answer-panel');
+
+            faqQuestionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+
+                    // Ocultar todas las respuestas
+                    faqAnswerPanels.forEach(panel => {
+                        panel.classList.add('hidden');
+                    });
+
+                    // Quitar clase 'active' de todos los botones
+                    faqQuestionButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    // Mostrar la respuesta correcta
+                    const targetPanel = document.getElementById(targetId);
+                    if (targetPanel) {
+                        targetPanel.classList.remove('hidden');
+                    }
+
+                    // Añadir clase 'active' al botón clickeado
+                    button.classList.add('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
